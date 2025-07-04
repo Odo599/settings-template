@@ -6,7 +6,10 @@ function App() {
         <>
             <SettingsTemplate
                 title="Test Settings"
-                toggles={[{ name: "toggle1", state: false, id: "toggle1id" }]}
+                toggles={[
+                    { name: "toggle1", state: false, id: "toggle1id" },
+                    { name: "toggle2", state: true, id: "toggle2id" },
+                ]}
             />
         </>
     );

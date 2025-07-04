@@ -1,0 +1,79 @@
+.setting-name {
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 1.7em;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+    color: var(--foreground);
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 18px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    color: var(--foreground);
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider-track {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    transition: background 0.3s;
+    background: var(--secondary);
+}
+
+.slider-thumb {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background: var(--background);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s;
+}
+
+input[type="checkbox"]:checked + .slider .slider-track {
+    background-color: var(--primary);
+}
+
+input[type="checkbox"]:checked + .slider .slider-thumb {
+    transform: translateX(20px);
+}
+
+.slider:active .slider-thumb {
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+}
